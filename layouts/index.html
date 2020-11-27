@@ -9,6 +9,12 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <p>Hello world</p>
+    <h1>Luke's Blog</h1>
+    <p>Hello, this is a work-in-progress blog.</p>
+    <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    </ul>
 </body>
 </html>
